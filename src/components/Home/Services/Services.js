@@ -31,7 +31,6 @@ const Services = () => {
              <div className="text-center">
                 <h1>Provide awesome <span style = {{color: '#4CAF50'}}>services</span> </h1>
             </div>
-            
            <div className="d-flex justify-content-center">
             <div className = " w-75 mt-5 row">
                 {
