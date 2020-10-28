@@ -5,7 +5,7 @@ import profile from '../../../images/customer-1.png'
 const FeedBackDetails = (props) => {
     const {name, companyName, description, picture} = props.review;
     return (
-        <div className="col-md-6 w-50 col-lg-4 col-sm-12 col-12">
+        <div className="col-md-6 col-lg-4 mb-3 col-sm-6 col-12">
             
             <Card style={{ width: '18rem'}}>
                 <Card.Body>
@@ -17,15 +17,6 @@ const FeedBackDetails = (props) => {
                     <Card.Text> {description} </Card.Text>
                 </Card.Body>
             </Card>
-            
-            {/* <div className="d-flex ">
-                <img className="rounded-circle z-depth-2" width="20%" src={picture} alt="" />
-                <div className="ml-3">
-                    <h3>{name}</h3>
-                    <h4>{companyName}</h4>
-                </div>
-            </div>
-    <p className="text-secondary mt-3">{description}</p> */}
         </div>
     );
 };

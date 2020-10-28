@@ -7,7 +7,7 @@ const ServiceListDetails = ({ service }) => {
             <td>{service.email}</td>
             <td>{service.title}</td>
             <td>{service.description}</td>
-            <td>Pending</td>
+            <td className = "btn btn-warning">Pending</td>
         </tr>
 
     );

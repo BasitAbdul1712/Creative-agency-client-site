@@ -5,19 +5,19 @@ import { UserContext } from '../../../App';
 import FakeData from '../../Home/Home/FakeData.json'
 const ServiceDetails = (props) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
-    const [isAdmin, setIsAdmin] = useState(false)
+    // const [isAdmin, setIsAdmin] = useState(false)
 
-    useEffect(() => {
-        fetch('https://enigmatic-eyrie-77432.herokuapp.com/isAdmin', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email: loggedInUser.email })
-        })
-            .then(res => res.json())
-            .then(data => setIsAdmin(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('https://enigmatic-eyrie-77432.herokuapp.com/isAdmin', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify({ email: loggedInUser.email })
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => setIsAdmin(data))
+    // }, [])
     // console.log(props);
     const history = useHistory()
     const handleClick = (_id) => {
@@ -27,7 +27,7 @@ const ServiceDetails = (props) => {
     
     const {title, image, description, _id} = props.service;
     return (
-        <div className="col-md-4 col-sm-6 text-center col-xs-12 ">
+        <div className="col-md-6 col-lg-4 mb-3 col-sm-6 text-center col-xs-12 ">
             {/* <img width="40%" src= alt="" />
             <h5>{service.title}</h5>
             <p className="text-secondary">{service.description}</p> */}

@@ -18,7 +18,7 @@ const FeedBack = () => {
                 <h1>Provide awesome <span style = {{color: '#4CAF50'}}>services</span> </h1>
             </div>
            <div className = "d-flex justify-content-center">
-                <div className = "d-flex justify-content-center w-75 mt-5 row">
+                <div className = " w-75 mt-5 row">
                    {
                        reviews.map(review =><FeedBackDetails review ={review} key={review._id} ></FeedBackDetails>)
                    }
