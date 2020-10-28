@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ServiceListDetails = ({ service }) => {
-    console.log(service);
     return (
         <tr>
             <td> {service.name}  </td>

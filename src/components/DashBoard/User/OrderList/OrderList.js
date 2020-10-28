@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
-import logo from '../../../../images/logos/logo.png'
 import OrderListDetails from './OrderListDetails';
 import { UserContext } from '../../../../App';
 const OrderList = () => {
@@ -31,7 +29,7 @@ const OrderList = () => {
 
                     <div style={{ backgroundColor: '#F4F7FC', height: '85vh'}} className="mt-3  pt-3 row">
                          {
-                                orders.map(order => <OrderListDetails order = { order }></OrderListDetails> )
+                                orders.map(order => <OrderListDetails key = {order._id} order = { order }></OrderListDetails> )
                             }
                     </div>
 

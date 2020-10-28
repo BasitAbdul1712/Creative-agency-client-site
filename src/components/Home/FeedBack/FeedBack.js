@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import FeedBackDetails from './FeedBackDetails';
 const FeedBack = () => {
     const [reviews, setReviews] = useState([])
-    console.log(reviews);
     useEffect(() =>{
         fetch('https://enigmatic-eyrie-77432.herokuapp.com/reviews', {
             method: 'GET',
@@ -21,7 +20,7 @@ const FeedBack = () => {
            <div className = "d-flex justify-content-center">
                 <div className = "d-flex justify-content-center w-75 mt-5 row">
                    {
-                       reviews.map(review =><FeedBackDetails review ={review} ></FeedBackDetails>)
+                       reviews.map(review =><FeedBackDetails review ={review} key={review._id} ></FeedBackDetails>)
                    }
                     
                 </div>
