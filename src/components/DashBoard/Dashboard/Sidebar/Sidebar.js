@@ -5,10 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faBook, faPlus, faUserPlus, faComments } from '@fortawesome/free-solid-svg-icons'
 import { UserContext } from '../../../../App';
 const Sidebar = () => {
-
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [isAdmin, setIsAdmin] = useState(false)
-
     useEffect(() => {
         fetch('https://enigmatic-eyrie-77432.herokuapp.com/isAdmin', {
             method: 'POST',

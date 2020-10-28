@@ -23,6 +23,9 @@ const Services = () => {
            <div className="d-flex justify-content-center">
             <div className = " w-75 mt-5 row">
                 {
+                    services.length === 0 && <p>Loading</p> 
+                }
+                {
                     services.map(service =><ServiceDetails key={service._id} service ={service} ></ServiceDetails>)
                 }
                 </div>

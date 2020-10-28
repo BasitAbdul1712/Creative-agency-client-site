@@ -5,7 +5,7 @@ import logo from '../../../../images/logos/logo.png'
 const OrderListDetails = (props) => {
     const { title, description, image } = props.order;
     return (
-        <div style={{height: '250px',}} className="col-md-6 col-lg-4 pt-0 col-sm-6 w-auto rounded-lg h-0 card shadow col-xs-12 ">
+        <div style={{height: '280px',}} className="col-md-6 col-lg-4 pt-0 col-sm-6 w-auto rounded-lg h-0 card shadow col-xs-12 ">
         
                 <div  className="">
                     <div className="mt-2 mr-0 mb-3 d-flex justify-content-between row">
