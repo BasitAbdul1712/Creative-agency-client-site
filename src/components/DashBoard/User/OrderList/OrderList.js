@@ -29,7 +29,10 @@ const OrderList = () => {
                         <div className="col-md-2 col-sm-6">{loggedInUser.name}</div>
                     </div>
                     {
-                        orders.length === 0 && <CircularProgress disableShrink />
+                        orders.length === 0 &&  <div>
+                            <CircularProgress disableShrink />
+                        <h5>You have no orders</h5>
+                        </div>
                     }
                     <div style={{ backgroundColor: '#F4F7FC', height: '85vh'}} className="mt-3  pt-3 row">
                          {

@@ -36,12 +36,12 @@ const Review = () => {
             <Sidebar></Sidebar>
             <div className=" w-75 mt-5 ">
                 <div className="row font-weight-bold d-flex justify-content-between">
-                    <div className="col-md-2 col-sm-6">Order</div>
+                    <div className="col-md-2 col-sm-6">Write a review here </div>
                     <div className="col-md-2 col-sm-6">{loggedInUser.name}</div>
                 </div>
 
                 <div style={{ backgroundColor: '#F4F7FC', height: '85vh' }} className="mt-3 pt-5 ">
-                <form className=" pl-3 mb-5 pb-5 w-50">
+                <form onSubmit={handleSubmit} className=" pl-3 mb-5 pb-5 w-50">
                         <div class="form-group">
                             <input type="name" class="form-control" id="name" placeholder="Your name" required />
                         </div>
@@ -51,7 +51,7 @@ const Review = () => {
                         <div class="form-group">
                             <textarea class="form-control" id="description" placeholder="Description" rows="4" required></textarea>
                         </div>
-                        <button onClick={handleSubmit} style={{ width: '100px' }} type="submit" class="btn btn-dark mt-3">Submit</button>
+                        <button  style={{ width: '100px' }} type="submit" class="btn btn-dark mt-3">Submit</button>
                     </form>
                 </div>
 

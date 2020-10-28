@@ -80,7 +80,7 @@ const OrderDetails = (props) => {
     return (
         <div className=" w-75 mt-5 ">
             <div className="row font-weight-bold d-flex justify-content-between">
-                <div className="col-md-2">Order</div>
+                <div className="col-md-2">Order a course here</div>
                 <div className="col-md-2">{loggedInUser.name}</div>
             </div>
        
