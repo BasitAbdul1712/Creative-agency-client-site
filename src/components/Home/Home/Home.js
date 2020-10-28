@@ -8,6 +8,7 @@ import Logos from '../Logos/Logos';
 import Services from '../Services/Services';
 
 const Home = () => {
+    document.title = 'HOME'
     return (
         <div>
             <Header></Header>

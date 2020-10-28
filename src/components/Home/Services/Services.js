@@ -1,31 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import webAndMob from '../../../images/icons/service1.png';
 import graphics from '../../../images/icons/service2.png';
 import webDev from '../../../images/icons/service3.png'
 import ServiceDetails from './ServiceDetails';
+import FakeData from '../Home/FakeData.json'
 
 
 const Services = () => {
-    const services = [
-        {
-            icon: webAndMob,
-            title: 'Web & Mobile design',
-            description: 'We craft stunning and amazing web UI using a well drafted UX to fit your product',
-            background: 'primary'
-        },
-        {
-            icon: graphics,
-            title: 'Graphics design',
-            description: 'Amazing flyers, social media posts and brand presentations that would make your brand stand out- ',
-            background: 'dark'
-        },
-        {
-            icon: webDev,
-            title: 'Web Development',
-            description: 'With well written codes, we build amazing apps far all plattorms, mobile and web apps in general',
-            background: 'primary'
-        }
-    ]
+    const [services, setServices] = useState([])
+   useEffect(() => {
+       fetch('https://enigmatic-eyrie-77432.herokuapp.com/service')
+       .then(response => response.json())
+       .then(data => setServices(data))
+
+   }, [])
+
     return (
         <main className="service-container mt-5">
              <div className="text-center">

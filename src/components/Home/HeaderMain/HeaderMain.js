@@ -3,7 +3,7 @@ import frame from '../../../images/logos/Frame.png'
 
 const HeaderMain = () => {
     return (
-        <main style={{height:'550px'}} className="row d-flex mt-0">
+        <main style={{height:'auto'}} className="row d-flex pb-5">
             <div className="col-md-3 pt-5 offset-md-1">
                 <h1>Let's Grow Your Brand to The <br/> Next Level</h1>
                 <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum repudiandae vero aliquam asperiores veniam animi suscipit qui totam ea error, vel eius adipisci quisquam!</p>

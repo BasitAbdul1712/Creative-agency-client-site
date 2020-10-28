@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { UserContext } from '../../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 
+
+
 const Review = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const handleSubmit = (event) => {
+        
+            event.preventDefault()
+            const name =document.getElementById('name').value;
+            const companyName =document.getElementById('companyName').value;
+            const description =document.getElementById('description').value;
+            // const reviewList = {name: name, companyName:companyName, description: description}
+            const orderReview = {...loggedInUser, name: name, companyName:companyName, description: description}
+        
+        
+            fetch('https://enigmatic-eyrie-77432.herokuapp.com/addReview',{
+                    method: 'POST',
+                    headers:{'Content-Type': 'application/json'},
+                    body: JSON.stringify(orderReview)
+                })
+                .then(response => response.json())
+                .then(data =>{
+                    if (data) {
+                        alert('your order placed successfully')
+                    }
+                })
+            event.target.reset()
+            }
+        
     return (
         <div className="container-fluid">
         <div className=" ml-5 row">
@@ -9,7 +37,7 @@ const Review = () => {
             <div className=" w-75 mt-5 ">
                 <div className="row font-weight-bold d-flex justify-content-between">
                     <div className="col-md-2 col-sm-6">Order</div>
-                    <div className="col-md-2 col-sm-6">User Name</div>
+                    <div className="col-md-2 col-sm-6">{loggedInUser.name}</div>
                 </div>
 
                 <div style={{ backgroundColor: '#F4F7FC', height: '85vh' }} className="mt-3 pt-5 ">
@@ -23,7 +51,7 @@ const Review = () => {
                         <div class="form-group">
                             <textarea class="form-control" id="description" placeholder="Description" rows="4" required></textarea>
                         </div>
-                        <button style={{ width: '100px' }} type="submit" class="btn btn-dark mt-3">Submit</button>
+                        <button onClick={handleSubmit} style={{ width: '100px' }} type="submit" class="btn btn-dark mt-3">Submit</button>
                     </form>
                 </div>
 

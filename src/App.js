@@ -9,13 +9,15 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home/Home';
 import Login from './components/Login/Login';
-import Dashboard from './components/DashBoard/Dashboard/Dashboard';
+// import Dashboard from './components/DashBoard/Dashboard/Dashboard';
 import Order from './components/DashBoard/User/Order/Order';
 import OrderList from './components/DashBoard/User/OrderList/OrderList';
 import Review from './components/DashBoard/User/Review/Review';
 import ServiceList from './components/DashBoard/Admin/ServiceList/ServiceList';
 import AddService from './components/DashBoard/Admin/AddService/AddService';
 import MakeAdmin from './components/DashBoard/MakeAdmin/MakeAdmin';
+import PrivateRoute from './components/Login/PrivateRoute';
+import Dashboard from './components/DashBoard/Dashboard/DashboardBody/Dashboard';
 
 export const UserContext = createContext();
 
@@ -34,15 +36,18 @@ function App() {
         <Route path="/dashboard">
           <Dashboard></Dashboard>
         </Route>
-        <Route path="/order">
-          <Order></Order>
+        <PrivateRoute path="/service/:_id">
+        <Dashboard></Dashboard>
+        </PrivateRoute>
+        <Route path="/Order">
+        <Order></Order>
         </Route>
-        <Route path="/orderList">
+        <PrivateRoute path="/orderList">
           <OrderList></OrderList>
-        </Route>
-        <Route path="/review">
+        </PrivateRoute>
+        <PrivateRoute path="/review">
           <Review></Review>
-        </Route>
+        </PrivateRoute>
         <Route path="/serviceList">
           <ServiceList></ServiceList>
         </Route>

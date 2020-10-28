@@ -1,0 +1,27 @@
+
+[
+    {
+        "_id": "5f5e1df3800fb26d48935321",
+        "index": 0,
+        "title": "Web & Mobile design",
+        "description": "We craft stunning and amazing web UI using a well drafted UX to fit your product",
+        "icon": "https://i.ibb.co/v48WWMW/service1.png",
+        "background": "primary"
+      },
+      {
+        "_id": "5f5e1df33c9b1cfd0e20d4c8",
+        "index": 1,
+        "title": "Graphics design",
+        "description":"Amazing flyers, social media posts and brand presentations that would make your brand stand out" ,
+        "icon": "https://i.ibb.co/VWVShtB/service2.png",
+        "background": "dark"
+      },
+      {
+        "_id": "5f5e1df36eb5dd1272da9a7c",
+        "index": 2,
+        "title": "Web Development",
+        "description": "With well written codes, we build amazing apps far all plattorms, mobile and web apps in general",
+        "icon": "https://i.ibb.co/FHrLwqC/service3.png",
+        "background": "primary"
+      }
+]

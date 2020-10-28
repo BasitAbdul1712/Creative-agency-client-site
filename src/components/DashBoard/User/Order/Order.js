@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faShoppingCart, faBook, faComments} from '@fortawesome/free-solid-svg-icons'
 import logo from '../../../../images/logos/logo.png'
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
-import DashBody from '../../Dashboard/DashboardBody/DashBody';
+import OrderDetails from './OrderDetails';
 
 const Order = () => {
     return (
         <div className="container-fluid">
-            <div className="ml-5 row">
+            <div className=" ml-5 row">
                 <Sidebar></Sidebar>
-                <DashBody></DashBody>
+                <OrderDetails></OrderDetails>
             </div>
         </div>
     );
