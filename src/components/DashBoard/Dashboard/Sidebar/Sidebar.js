@@ -54,9 +54,17 @@ const Sidebar = () => {
                             <span className="mr-2"><FontAwesomeIcon icon={faComments}></FontAwesomeIcon></span>Review</Link>
                     </div>
                 </div>}
+                {
+                    loggedInUser.isSignedIn?
+                
                 <div className="mt-5 pt-3">
-                    <Link onclick = {() => setLoggedInUser({})} className=" btn btn-dark font-weight-bold text-white" to = "/">Logout</Link>
+                    <Link onClick = {() => setLoggedInUser({})} className=" btn btn-dark font-weight-bold text-white" to = "/">Logout</Link>
                  </div>
+                 : 
+                 <div className="mt-5 pt-3">
+                 <Link  className=" btn btn-dark font-weight-bold text-white" to = "/">Login</Link>
+              </div>
+                 }
         </div>
     );
 };

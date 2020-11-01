@@ -31,7 +31,7 @@ const OrderList = () => {
                     {
                         orders.length === 0 &&  <div>
                             <CircularProgress disableShrink />
-                        <h5>You have no orders</h5>
+                            <h5>You have no orders</h5>
                         </div>
                     }
                     <div style={{ backgroundColor: '#F4F7FC', height: '85vh'}} className="mt-3  pt-3 row">

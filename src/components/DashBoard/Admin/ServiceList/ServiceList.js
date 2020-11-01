@@ -41,10 +41,10 @@ const ServiceList = () => {
                     <div style={{ backgroundColor: '#F4F7FC', height: '85vh' }} className="mt-3 pt-5 container">
 
                         <div class="table-responsive card shadow">
-                        {services.length === 0 && <div className={classes.root}>
-                                        <LinearProgress />
-                                        <LinearProgress color="secondary" />
-                                    </div>}
+                            {services.length === 0 && <div className={classes.root}>
+                                <LinearProgress />
+                                <LinearProgress color="secondary" />
+                            </div>}
                             <table class="table table-striped">
                                 <thead>
                                     <tr >
@@ -57,7 +57,7 @@ const ServiceList = () => {
                                 </thead>
 
                                 <tbody>
-                                   
+
                                     {
                                         services.map(service => <ServiceListDetails key={service._id} service={service}></ServiceListDetails>)
                                     }
