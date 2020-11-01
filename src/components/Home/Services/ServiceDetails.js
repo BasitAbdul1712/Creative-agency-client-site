@@ -26,11 +26,9 @@ const ServiceDetails = (props) => {
     }
     
     const {title, image, description, _id} = props.service;
+    console.log(image.img);
     return (
         <div className="col-md-6 col-lg-4 mb-3 col-sm-6 text-center col-xs-12 ">
-            {/* <img width="40%" src= alt="" />
-            <h5>{service.title}</h5>
-            <p className="text-secondary">{service.description}</p> */}
             <Card onClick={()=> {handleClick(_id)} } style={{ width: '17rem', cursor: 'pointer'}}>
                 <Card.Body>
                 <Card.Img style={{ width: '40%'}}variant="top" src={`data:image/png;base64,${image.img}`} />

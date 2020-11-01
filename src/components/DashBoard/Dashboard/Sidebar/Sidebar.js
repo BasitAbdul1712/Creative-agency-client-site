@@ -42,15 +42,15 @@ const Sidebar = () => {
                 <div>
 
                     <div className="mt-5">
-                        <Link className="nav-link font-weight-bold text-dark" to="/Order">
+                        <Link className="nav-link font-weight-bold text-dark active" to="/Order">
                             <span className="mr-2"><FontAwesomeIcon icon={faShoppingCart} /></span>Order</Link>
                     </div>
                     <div>
-                        <Link className="nav-link font-weight-bold text-dark" to="/orderList">
+                        <Link className="nav-link font-weight-bold text-dark active" to="/orderList">
                             <span className="mr-2"><FontAwesomeIcon icon={faBook}></FontAwesomeIcon></span>Order List</Link>
                     </div>
                     <div>
-                        <Link className="nav-link font-weight-bold text-dark" to="/review">
+                        <Link className="nav-link font-weight-bold text-dark active" to="/review">
                             <span className="mr-2"><FontAwesomeIcon icon={faComments}></FontAwesomeIcon></span>Review</Link>
                     </div>
                 </div>}
